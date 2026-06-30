@@ -22,12 +22,16 @@ Both clients share their backing servers from [demo-servers/](./demo-servers) ra
 
 ## Setup
 
+For items 1–5:
+
 ```bash
 python3 -m venv _venv
 source _venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env   # then fill in OPENAI_API_KEY
 ```
+
+Items 6–7 (`multi-server-agent/`) use a different stack (LangGraph + `langchain-mcp-adapters` instead of the raw `mcp` SDK) — install with `pip install -r demo-servers/requirements.txt` instead. See [multi-server-agent/README.md](./multi-server-agent/README.md) for full setup.
 
 ## MCP CLI
 
