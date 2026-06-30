@@ -13,7 +13,7 @@ from openai import AsyncOpenAI
 nest_asyncio.apply()
 
 # Load environment variables
-load_dotenv("../.env")
+load_dotenv()
 
 
 class MCPOpenAIClient:

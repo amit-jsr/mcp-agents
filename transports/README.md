@@ -62,6 +62,13 @@ python server.py
 uv run server.py
 ```
 
+`server.py` in this repo defaults to `stdio`. Select a different transport with the `TRANSPORT` env var instead of editing the file:
+
+```bash
+TRANSPORT=sse python server.py
+TRANSPORT=streamable-http python server.py
+```
+
 ### What Happens When You Run an MCP Server?
 
 When you run an MCP server:

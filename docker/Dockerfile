@@ -12,9 +12,8 @@ COPY requirements.txt .
 RUN uv venv
 RUN uv pip install -r requirements.txt
 
-# Copy application code
+# Copy application code (client.py runs on the host, not in the container)
 COPY server.py .
-COPY client.py .
 
 # Expose the port the server runs on
 EXPOSE 8050
