@@ -1,6 +1,6 @@
 # MCP Playground
 
-A working reference for building MCP (Model Context Protocol) servers and clients in Python — transports, OpenAI tool-calling integration, a function-calling comparison, Docker deployment, and multi-server agent orchestration across local and remote MCP servers.
+A working reference for building MCP (Model Context Protocol) servers and clients in Python — transports, OpenAI tool-calling integration, a function-calling comparison, and Docker deployment.
 
 Background concepts (architecture, primitives, lifecycle, MCP vs. plain function calling) live in [docs/CONCEPTS.md](./docs/CONCEPTS.md). This README covers setup and points at the runnable code.
 
@@ -15,10 +15,6 @@ Read in this order:
 | 3 | [openai-integration/](./openai-integration) | A real OpenAI tool-calling loop backed by an MCP server (knowledge-base example) |
 | 4 | [function-calling/](./function-calling) | The same knowledge-base tool, implemented as plain OpenAI function calling instead of MCP — for contrast |
 | 5 | [docker/](./docker) | Packaging an MCP server + client into containers |
-| 6 | [multi-server-agent/local_client.py](./multi-server-agent/local_client.py) | A LangGraph agent connected to multiple MCP servers you run yourself (stdio + local HTTP) |
-| 7 | [multi-server-agent/remote_client.py](./multi-server-agent/remote_client.py) | The same agent extended with MCP servers hosted by a third party (GitHub, Supabase) |
-
-Both clients share their backing servers from [demo-servers/](./demo-servers) rather than each keeping a copy.
 
 ## Setup
 
