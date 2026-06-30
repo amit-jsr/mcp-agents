@@ -1,6 +1,6 @@
 # ============================================================
-# TRANSPORT 2: streamable-http
-# Runs as a standalone HTTP server — client hits it via URL
+# TRANSPORT: local streamable-http
+# Runs as a standalone HTTP server on your machine — client hits it via URL
 # Start with: python weather_server.py
 # Runs on: http://localhost:8000/mcp
 # ============================================================
@@ -53,5 +53,5 @@ def compare_weather(city1: str, city2: str) -> str:
     )
 
 if __name__ == "__main__":
-    # STREAMABLE-HTTP: runs as a web server, client connects via URL
+    # LOCAL STREAMABLE-HTTP: runs as a web server, client connects via localhost
     mcp.run(transport="streamable-http", host="0.0.0.0", port=8000)

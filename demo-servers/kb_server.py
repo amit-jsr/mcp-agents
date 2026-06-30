@@ -1,5 +1,5 @@
 # ============================================================
-# TRANSPORT 2b: streamable-http (second HTTP server, port 8001)
+# TRANSPORT: local streamable-http (second HTTP server, port 8001)
 # Simulates a "Knowledge Base" domain expert
 # Start with: python kb_server.py
 # Runs on: http://localhost:8001/mcp

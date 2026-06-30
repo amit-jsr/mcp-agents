@@ -1,5 +1,5 @@
 # ============================================================
-# TRANSPORT 1: stdio
+# TRANSPORT: stdio
 # Runs as a local subprocess — client spawns this process
 # and communicates via stdin/stdout
 # ============================================================
