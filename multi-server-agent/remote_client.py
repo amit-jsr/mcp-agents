@@ -1,6 +1,6 @@
 """
-Local + Remote MCP Servers Demo
-================================
+Local + Remote MCP Servers
+===========================
 Connects to MCP servers using 3 transport patterns:
 
   math_server.py    → stdio                  (local subprocess)
@@ -47,7 +47,7 @@ SUPABASE_ACCESS_TOKEN = os.getenv("SUPABASE_ACCESS_TOKEN", "")  # optional
 MATH_SERVER_PATH = str(Path(__file__).parent.parent / "demo-servers" / "math_server.py")
 
 # ── Queries to demo all servers ───────────────────────────
-DEMO_QUERIES = [
+QUERIES = [
     # Uses math_server (stdio)
     "What is (7 + 3) raised to the power of 2, then divided by 5?",
 
@@ -144,7 +144,7 @@ async def run_agent():
         agent = create_react_agent(llm, tools)
 
         # Run demo queries (the GitHub query only resolves if that server is connected)
-        for i, query in enumerate(DEMO_QUERIES, 1):
+        for i, query in enumerate(QUERIES, 1):
             if "GitHub" in query and "github" not in server_config:
                 continue
 

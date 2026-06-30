@@ -1,6 +1,6 @@
 """
-Local MCP Servers Demo
-======================
+Local MCP Servers
+==================
 Connects to 3 MCP servers that all run on YOUR machine, using 2 transports:
 
   math_server.py    → stdio              (local subprocess, no port)
@@ -33,7 +33,7 @@ if not OPENAI_API_KEY:
 MATH_SERVER_PATH = str(Path(__file__).parent.parent / "demo-servers" / "math_server.py")
 
 # ── Queries to demo all three servers ─────────────────────
-DEMO_QUERIES = [
+QUERIES = [
     # Uses math_server (stdio)
     "What is (7 + 3) raised to the power of 2, then divided by 5?",
 
@@ -93,7 +93,7 @@ async def run_agent():
         agent = create_react_agent(llm, tools)
 
         # Run demo queries
-        for i, query in enumerate(DEMO_QUERIES, 1):
+        for i, query in enumerate(QUERIES, 1):
             print(f"{'=' * 60}")
             print(f"Query {i}: {query}")
             print("-" * 60)
